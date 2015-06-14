@@ -23,12 +23,13 @@ RUN tar xvfz mysql-connector-java-5.1.35.tar.gz
 RUN sudo mv mysql-connector-java-5.1.35/mysql-connector-java-5.1.35-bin.jar /usr/share/java
 ENV CLASSPATH=$CLASSPATH:/usr/share/java/mysql-connector-java-5.1.35-bin.jar
 
+# install plugin
+RUN sudo /usr/share/elasticsearch/bin/plugin --install jdbc --url http://xbib.org/repository/org/xbib/elasticsearch/plugin/elasticsearch-river-jdbc/1.1.0.1/elasticsearch-river-jdbc-1.1.0.1-plugin.zip
+RUN cp /usr/share/java/mysql-connector-java-5.1.35-bin.jar /usr/share/elasticsearch/plugins/jdbc
+
 RUN wget http://xbib.org/repository/org/xbib/elasticsearch/importer/elasticsearch-jdbc/1.6.0.0/elasticsearch-jdbc-1.6.0.0-dist.zip
 RUN unzip elasticsearch-jdbc-1.6.0.0-dist.zip
 RUN mv elasticsearch-jdbc-1.6.0.0/lib/mysql-connector-java-5.1.33.jar /usr/share/elasticsearch/plugins/
-
-RUN /usr/share/elasticsearch/bin/plugin -install royrusso/elasticsearch-HQ
-
 
 EXPOSE 9200
 
