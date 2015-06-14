@@ -27,7 +27,7 @@ RUN wget http://xbib.org/repository/org/xbib/elasticsearch/importer/elasticsearc
 RUN unzip elasticsearch-jdbc-1.6.0.0-dist.zip
 RUN mv elasticsearch-jdbc-1.6.0.0/lib/mysql-connector-java-5.1.33.jar /usr/share/elasticsearch/plugins/
 
-RUN plugin -install royrusso/elasticsearch-HQ
+RUN /usr/share/elasticsearch/bin/plugin -install royrusso/elasticsearch-HQ
 
 
 EXPOSE 9200
