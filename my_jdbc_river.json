@@ -4,6 +4,7 @@
         "url" : "jdbc:mysql://localhost:3306/hoppin",
         "user" : "root",
         "password" : "password",
+	"schedule" : "0 0-59 0-23 ? * *",
         "sql" : "SELECT * FROM \"actions\""
     }
 }
