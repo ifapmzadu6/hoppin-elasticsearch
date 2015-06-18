@@ -1,9 +1,0 @@
-{
-    "type" : "jdbc",
-    "jdbc" : {
-        "url" : "jdbc:mysql://localhost:3306/hoppin",
-        "user" : "root",
-        "password" : "password",
-        "sql" : "SELECT * FROM \"actions\""
-    }
-}

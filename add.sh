@@ -6,6 +6,7 @@ obody='{
     "url" : "jdbc:mysql://MYSQL_ADDR:3306/hoppin",
     "user" : "root",
     "password" : "MYSQL_PASSWORD",
+    "schedule" : "0 0-59 0-23 ? * *",
     "sql" : "SELECT * FROM \"actions\""
   }   
 }'

@@ -27,6 +27,9 @@ ENV CLASSPATH=$CLASSPATH:/usr/share/java/mysql-connector-java-5.1.35-bin.jar
 RUN sudo /usr/share/elasticsearch/bin/plugin --install jdbc --url http://xbib.org/repository/org/xbib/elasticsearch/plugin/elasticsearch-river-jdbc/1.5.0.5/elasticsearch-river-jdbc-1.5.0.5-plugin.zip
 RUN cp /usr/share/java/mysql-connector-java-5.1.35-bin.jar /usr/share/elasticsearch/plugins/jdbc/
 
+RUN sudo /usr/share/elasticsearch/bin/plugin --install mobz/elasticsearch-head
+RUN sudo /usr/share/elasticsearch/bin/plugin --install royrusso/elasticsearch-HQ
+
 EXPOSE 9200
 
 CMD ["/usr/share/elasticsearch/bin/elasticsearch"]
