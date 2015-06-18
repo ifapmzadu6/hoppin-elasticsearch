@@ -14,5 +14,5 @@ obody='{
 tbody=`echo $obody | sed -e "s/MYSQL_ADDR/$MYSQL_ADDR/"`
 body=`echo $tbody | sed -e "s/MYSQL_PASSWORD/$MYSQL_PASSWORD/"`
 
-curl -XPUT http://localhost:9200/_river/my_jdbc_river/_meta -d "$body"
+curl -XPUT "localhost:9200/_river/my_jdbc_river/_meta" -d "$body"
 
