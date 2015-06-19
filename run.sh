@@ -15,8 +15,5 @@ docker stop elasticsearch
 docker rm elasticsearch
 
 # リンクして実行
-docker run -d -p 9200:9200 --name elasticsearch elasticsearch-img:0.1.0
+docker run -d -p 9200:9200 -e MYSQL_ADDR=$MYSQL_ADDR -e MYSQL_PASSWORD=$MYSQL_PASSWORD --name elasticsearch elasticsearch-img:0.1.0
 
-sleep 10
-
-./add.sh
