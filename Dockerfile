@@ -48,5 +48,4 @@ EXPOSE 9200
 EXPOSE 5601
 
 CMD [ "./start.sh" ]
-CMD ["/kibana-4.1.0-linux-x64/bin/kibana"]
 
