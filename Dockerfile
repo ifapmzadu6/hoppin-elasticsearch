@@ -34,6 +34,10 @@ RUN unzip elasticsearch-jdbc-1.6.0.0-dist.zip
 ENV JDBC_IMPORTER_HOME=/usr/share/elasticsearch/plugins/elasticsearch-jdbc-1.6.0.0
 WORKDIR /
 
+# install kibana
+RUN wget --no-verbose https://download.elastic.co/kibana/kibana/kibana-4.1.0-linux-x64.tar.gz
+RUN tar zxvf kibana-4.1.0-linux-x64.tar.gz
+
 # launch
 ADD ./start.sh ./start.sh
 ADD ./add.sh ./add.sh
@@ -41,6 +45,8 @@ RUN chmod +x ./start.sh
 RUN chmod +x ./add.sh
 
 EXPOSE 9200
+EXPOSE 5601
 
 CMD [ "./start.sh" ]
+CMD ["/kibana-4.1.0-linux-x64/bin/kibana"]
 
