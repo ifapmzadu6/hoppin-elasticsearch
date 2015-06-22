@@ -41,8 +41,10 @@ RUN tar zxvf kibana-4.1.0-linux-x64.tar.gz
 # launch
 ADD ./start.sh ./start.sh
 ADD ./add.sh ./add.sh
+ADD ./kibana.sh ./kibana.sh
 RUN chmod +x ./start.sh
 RUN chmod +x ./add.sh
+RUN chmod +x ./kibana.sh
 
 EXPOSE 9200
 EXPOSE 5601
