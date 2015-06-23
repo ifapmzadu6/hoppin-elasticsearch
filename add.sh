@@ -12,7 +12,8 @@ obody='{
     "url" : "jdbc:mysql://MYSQL_ADDR:3306/hoppin",
     "user" : "root",
     "password" : "MYSQL_PASSWORD",
-    "sql" : "SELECT * FROM actions",
+    "sql" : "SELECT *, id as _id FROM actions",
+    "schedule" : "0 0-59 0-23 ? * *",
     "index" : "hoppin",
     "type" : "actions"
   }   
