@@ -1,7 +1,7 @@
-#!bin/sh
+#!bin/bash
 
-./add.sh &
-./kibana.sh &
+/root/add.sh &
+/root/kibana.sh &
 
 /usr/share/elasticsearch/bin/elasticsearch
 

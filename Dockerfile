@@ -38,15 +38,17 @@ RUN wget --no-verbose https://download.elastic.co/kibana/kibana/kibana-4.1.1-lin
 RUN tar zxvf kibana-4.1.1-linux-x64.tar.gz
 
 # launch
-ADD ./start.sh ./start.sh
-ADD ./add.sh ./add.sh
+ADD ./start.sh /root/start.sh
+ADD ./add.sh /root/add.sh
 ADD ./kibana.sh ./kibana.sh
-RUN sudo chmod +x ./start.sh
-RUN sudo chmod +x ./add.sh
-RUN sudo chmod +x ./kibana.sh
+RUN chmod +x /root/start.sh
+RUN chmod +x /root/add.sh
+RUN chmod +x /root/kibana.sh
 
 EXPOSE 9200
 EXPOSE 5601
 
-CMD [ "./start.sh" ]
+WORKDIR /
+
+CMD [ "/root/start.sh" ]
 

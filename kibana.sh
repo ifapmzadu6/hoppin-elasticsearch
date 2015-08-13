@@ -1,6 +1,6 @@
-#!bin/sh
+#!/bin/bash
 
 sleep 30
 
-/kibana-4.1.0-linux-x64/bin/kibana
+/root/kibana-4.1.1-linux-x64/bin/kibana
 
