@@ -29,7 +29,6 @@ echo $JDBC_IMPORTER_HOME
 bin=$JDBC_IMPORTER_HOME/bin
 lib=$JDBC_IMPORTER_HOME/lib
 
-$JDBC_IMPORTER_HOME
 cd $JDBC_IMPORTER_HOME
 echo "$body" | java \
        -cp "${lib}/*" \

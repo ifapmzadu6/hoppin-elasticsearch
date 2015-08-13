@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # このディレクトリに移動
 cd `dirname $0`
 
